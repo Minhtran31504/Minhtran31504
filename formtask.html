@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>WAI Form Task</title>
+    <meta charset="utf-8">
+    <meta name="description" content="WAI Form Task">
+    <meta name="keywords" content="Accessibility, Lab, Tasks">
+	<link rel="stylesheet" href="style.css"/>
+    <style>
+        input[type=text]:focus, textarea:focus, input[type=radio]:focus {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>WAI Form Example</h1>
+
+<form method="post" action=".">
+
+    <!-- Contact Information -->
+    <fieldset>
+        <legend>Contact Information</legend>
+
+        <label for="cname">Name:</label>
+        <input type="text" name="name" id="cname" aria-required="true" required>
+        
+        <label for="cemail">E-mail Address:</label>
+        <input type="email" name="email" id="cemail" aria-required="true" required>
+        
+        <label for="caddr">Mailing Address:</label>
+        <textarea name="address" id="caddr" rows="4" cols="40" aria-required="true" required></textarea>
+    </fieldset>
+
+    <!-- Credit Card Information -->
+    <fieldset>
+        <legend>Credit Card Information</legend>
+
+        <fieldset>
+            <legend>Card Type</legend>
+            <label for="cvisa"><input type="radio" name="card" id="cvisa" value="visa"> Visa</label>
+            <label for="cmc"><input type="radio" name="card" id="cmc" value="mc"> MasterCard</label>
+        </fieldset>
+
+        <label for="cnumber">Number:</label>
+        <input type="text" name="number" id="cnumber" aria-required="true" required>
+
+        <label for="cexpiry">Expiry:</label>
+        <input type="text" name="expiry" id="cexpiry" aria-required="true" required>
+    </fieldset>
+
+    <!-- Submit Buttons -->
+    <p>
+        <input type="submit" value="Submit order"> 
+        <input type="reset" value="Clear order">
+    </p>
+
+</form> 
+
+</body>
+</html>
